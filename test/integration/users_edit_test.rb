@@ -26,6 +26,10 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   	log_in_as(@user)
   	puts session[:forwarding_url]
   	assert_redirected_to edit_user_path(@user)
+  	# 第二次登录，重定向应该指向user个人信息
+  	log_in_as(@user)
+  	assert_nil session[:forwarding_url]
+  	assert_redirected_to user_path(@user)
   	
   	name = "Foo Bar"
   	email = "foo@bar.com"
