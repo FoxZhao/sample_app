@@ -5,6 +5,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # bcrypt
 gem 'bcrypt', '3.1.7'
+# 使用半真实的名字和电子邮件地址创建示例用户
+gem 'faker', '1.4.2'
+# 分页功能
+gem 'will_paginate', '3.0.7'
+# 分页样式
+gem 'bootstrap-will_paginate', '0.0.10'
 # bootstrap
 gem 'bootstrap-sass', '3.2.0.0'
 # Use sqlite3 as the database for Active Record
